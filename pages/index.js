@@ -1,5 +1,3 @@
-// pages/index.js
-
 export default function Home() {
   const products = [
     { name: "Tractor Hitch Spacer", price: 18.0, description: "Heavy-duty spacer for Category 1 & 2 hitches" },
@@ -33,3 +31,17 @@ export default function Home() {
                 <h3 className="text-lg font-semibold">{product.name}</h3>
                 <p className="text-gray-600 text-sm">{product.description}</p>
               </div>
+              <div className="text-[#c5050c] font-bold mt-2 md:mt-0">
+                ${product.price.toFixed(2)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+
+      <footer className="bg-gray-100 text-center text-sm text-gray-500 py-4">
+        &copy; 2025 Badgineer. All rights reserved.
+      </footer>
+    </div>
+  );
+}
