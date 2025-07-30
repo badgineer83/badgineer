@@ -1,76 +1,29 @@
-
-import React from 'react';
+// pages/index.js
 
 export default function Home() {
   const products = [
-    {
-      id: 1,
-      name: 'Pegboard Tool Holder Set',
-      description: 'Modular 3D-printed tool holders for standard pegboards.',
-      price: '18.00',
-    },
-    {
-      id: 2,
-      name: 'Custom Tractor Light Mount',
-      description: 'Durable mount for LED work lights on farm equipment.',
-      price: '25.00',
-    },
-    {
-      id: 3,
-      name: 'Stackable Toy Blocks',
-      description: 'Colorful, interlocking blocks perfect for kids.',
-      price: '12.00',
-    },
-    {
-      id: 4,
-      name: 'Wall Art: Wisconsin State',
-      description: 'Layered 3D wall art shaped like Wisconsin with Badger accents.',
-      price: '30.00',
-    },
+    { name: "Tractor Hitch", price: "$49.99", image: "/placeholder.jpg" },
+    { name: "3D Printed Cow", price: "$15.00", image: "/placeholder.jpg" },
+    { name: "Peg Board Organizer", price: "$25.00", image: "/placeholder.jpg" },
+    { name: "Planter Clip", price: "$5.00", image: "/placeholder.jpg" },
+    { name: "Custom Sign", price: "$35.00", image: "/placeholder.jpg" },
+    { name: "Tool Holder", price: "$20.00", image: "/placeholder.jpg" },
   ];
 
   return (
-    <main style={{ fontFamily: 'Arial', padding: '2rem' }}>
-      <h1 style={{ fontSize: '2.5rem', color: 'green' }}>Badgineer</h1>
-      <p style={{ marginBottom: '2rem' }}>
-        Custom 3D Printed Pegboards, Farm Parts, Toys & More
-      </p>
-      <div
-        style={{
-          display: 'grid',
-          gap: '1rem',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
-        }}
-      >
-        {products.map((product) => (
-          <div
-            key={product.id}
-            style={{
-              border: '1px solid #ddd',
-              borderRadius: '10px',
-              padding: '1rem',
-            }}
-          >
-            <h2>{product.name}</h2>
-            <p>{product.description}</p>
-            <p>
-              <strong>${product.price}</strong>
-            </p>
-            <button
-              style={{
-                marginTop: '0.5rem',
-                backgroundColor: '#ffc107',
-                border: 'none',
-                padding: '0.5rem 1rem',
-                cursor: 'pointer',
-              }}
-            >
-              Add to Cart
-            </button>
-          </div>
-        ))}
-      </div>
-    </main>
-  );
-}
+    <div className="bg-white text-gray-800 min-h-screen">
+      <header className="bg-[#c5050c] text-white py-4 shadow-md">
+        <div className="container mx-auto px-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold">Badgineer</h1>
+          <nav className="space-x-6">
+            <a href="#" className="hover:underline">Home</a>
+            <a href="#" className="hover:underline">Shop</a>
+            <a href="#" className="hover:underline">About</a>
+            <a href="#" className="hover:underline">Contact</a>
+          </nav>
+        </div>
+      </header>
 
+      <main className="container mx-auto px-4 py-12">
+        <section className="text-center mb-12">
+          <h2 className="text-3xl font-semibold mb-2">Custom 3D Printed
