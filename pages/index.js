@@ -16,19 +16,16 @@ export default function Home() {
       </header>
 
       <main className="p-6 max-w-4xl mx-auto flex-grow">
-        <section className="mb-8">
+        <section className="mb-8 border-b border-gray-300 pb-4">
           <h2 className="text-2xl font-semibold text-[#c5050c]">Custom 3D Printed Products</h2>
           <p className="text-gray-700">Durable. Practical. Made in Wisconsin.</p>
         </section>
 
-        <div className="space-y-6">
+        <div className="divide-y divide-gray-200">
           {products.map((product, index) => (
-            <div
-              key={index}
-              className="border-b border-gray-300 pb-4 flex flex-col md:flex-row md:items-center md:justify-between"
-            >
+            <div key={index} className="py-4 flex flex-col md:flex-row md:items-center md:justify-between">
               <div>
-                <h3 className="text-lg font-semibold">{product.name}</h3>
+                <h3 className="text-lg font-semibold text-[#c5050c]">{product.name}</h3>
                 <p className="text-gray-600 text-sm">{product.description}</p>
               </div>
               <div className="text-[#c5050c] font-bold mt-2 md:mt-0">
