@@ -1,44 +1,34 @@
-export default function Home() {
-  const products = [
-    { name: "Tractor Hitch Spacer", price: 18.0, description: "Heavy-duty spacer for Category 1 & 2 hitches" },
-    { name: "Garage Peg Hook System", price: 12.0, description: "Modular hooks for organizing tools" },
-    { name: "Seed Plate Adapter", price: 15.5, description: "Universal adapter for vintage planters" },
-    { name: "Tool Caddy Attachment", price: 10.0, description: "Clip-on tray for storing bolts, tools, parts" },
-    { name: "Livestock Gate Clip", price: 6.75, description: "Secure gate clip for fences or pens" },
-    { name: "Planter Bracket Mount", price: 13.25, description: "Mount for plastic or metal planting equipment" },
-  ];
+// pages/index.js
 
+export default function Home() {
   return (
-    <div className="bg-white text-black font-sans min-h-screen flex flex-col">
-      <header className="bg-[#c5050c] text-white px-6 py-4 shadow">
-        <h1 className="text-3xl font-bold">Badgineer</h1>
-        <p className="text-sm">Custom 3D printed parts for farms, garages & more.</p>
+    <div className="min-h-screen bg-badger-white text-badger-black p-6">
+      <header className="mb-8 border-b border-badger-gray pb-4">
+        <h1 className="text-4xl font-bold text-badger-red">Badgineer</h1>
+        <p className="text-lg text-badger-black mt-2">
+          Custom 3D Prints. Built to Work.
+        </p>
       </header>
 
-      <main className="p-6 max-w-4xl mx-auto flex-grow">
-        <section className="mb-8 border-b border-gray-300 pb-4">
-          <h2 className="text-2xl font-semibold text-[#c5050c]">Custom 3D Printed Products</h2>
-          <p className="text-gray-700">Durable. Practical. Made in Wisconsin.</p>
-        </section>
+      <section>
+        <h2 className="text-2xl font-bold text-badger-red mb-4">Featured Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {/* Product card example */}
+          <div className="border border-badger-gray p-4 rounded shadow hover:shadow-lg transition">
+            <img
+              src="/placeholder.png"
+              alt="Product"
+              className="w-full h-48 object-cover mb-4"
+            />
+            <h3 className="text-lg font-semibold text-badger-black">Product Name</h3>
+            <p className="text-badger-gray text-sm">
+              Short description of the product.
+            </p>
+          </div>
 
-        <div className="divide-y divide-gray-200">
-          {products.map((product, index) => (
-            <div key={index} className="py-4 flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <h3 className="text-lg font-semibold text-[#c5050c]">{product.name}</h3>
-                <p className="text-gray-600 text-sm">{product.description}</p>
-              </div>
-              <div className="text-[#c5050c] font-bold mt-2 md:mt-0">
-                ${product.price.toFixed(2)}
-              </div>
-            </div>
-          ))}
+          {/* You can add more product cards here */}
         </div>
-      </main>
-
-      <footer className="bg-gray-100 text-center text-sm text-gray-500 py-4">
-        &copy; 2025 Badgineer. All rights reserved.
-      </footer>
+      </section>
     </div>
   );
 }
